@@ -82,19 +82,21 @@ setTimeout(securedDescribeOccupation, 3000);
 
 // 5
 
-function someFunction(name = "Maria") {
+function someFunction(name) {
   console.log(`Hello ${name}`);
 }
 
 function slower(func, delay) {
-  return function () {
+  return function (name) {
     console.log(
       `Chill out, you will get you result in ${delay / 1000} seconds`
     );
-    setTimeout(func, delay);
+    setTimeout(function () {
+      func(name);
+    }, delay);
   };
 }
 
 let slowedSomeFunction = slower(someFunction, 3000);
 
-slowedSomeFunction();
+slowedSomeFunction("Maria");
