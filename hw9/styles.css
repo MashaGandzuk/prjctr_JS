@@ -1,0 +1,19 @@
+.toggle-btn-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.toggle-btn {
+  padding: 20px 70px;
+  border: 1px solid pink;
+  border-radius: 8px;
+  font-size: 30px;
+  color: palevioletred;
+}
+
+.active {
+  background: gray;
+}
